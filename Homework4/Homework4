@@ -1,0 +1,164 @@
+Sandeep Singh
+
+Homework 4
+
+1)	differences between display: none, and visibility : hidden
+•	Display: none: it means that it does not occupy any space and the tag on the page will not at all appear in the document. For example:
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p {
+ 	  	 display: none;	
+}
+</style>
+</head>
+<body>
+<p>This is a paragraph</p>
+</body>
+</html>
+
+•	Visibility: hidden: it means that the space will be taken up in the document and the element will be hidden. For example:
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p {
+ visibility: hidden;
+}
+</style>
+</head>
+<body>
+<p>This is a paragraph</p>
+</body>
+</html>
+
+
+2)	display property values, inline, inline-block, block
+•	Inline: It means that element will come in the same line as the other element. The height and width if decided by the browser. For example:
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p {
+    display: inline
+;
+}
+</style>
+</head>
+<body>
+	         <p>Display links as block elements</p>
+</body>
+</html>
+
+•	Inline-block: It means that element will come in the same line as the other element. For the inline-block you can determine the height and width. For example:
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p {
+    display: inline-block
+;
+}
+</style>
+</head>
+<body>
+
+<p>Display links as block elements</p>
+</body>
+</html>
+
+•	Block: It means that there will be a line break before and after that element. It turns on the display properties. For example:
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p {
+    display: block
+;
+}
+</style>
+</head>
+<body>
+
+<p>Display links as block elements</p>
+</body>
+</html>
+
+
+3)	What is inline css, internal css, external css, look into which one is better. Which one is recommended way?
+•	Inline CSS: It applies a style that is unique for a single element. This is foof for one individual CSS that you don’t want to repeat throughout the site. For example:
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 style="color:brown;margin-left:30px;">This is a heading.</h1
+
+</body>
+</html>
+
+•	Internal CSS: Applying CSS to the entire page or a document. This makes it easy to apply styles class or id’s in order to reuse the code. For example:
+
+	      <head>
+	        <style type="text/css">
+   	         h1 {color: blue ;}
+                   p {color: green;}
+                  </style>
+	        </head>
+
+•	External CSS: Applying to entire page and have CSS in a new file and bring the CSS file for difference purposes like reusing the code in multiple web pages and maintainability (make changes in the web page if there is any change). For
+ example: 
+	       <head>
+	       <link rel="stylesheet" type="text/css" href="/support/style.css" />
+                 </head>
+
+
+4)	CSS properties reference
+•	CSS has many different properties groups. Some of those properties are: color, background and border, basic box layout, flexible box layout, text, text decoration, font, writing mode, table list and counter, animation, transform, basic user interface, multicolumn layout, etc. Here is an example of combining some of these properties elements:
+
+<style>
+
+p {
+    display:inline;
+    color: red;
+    background-color: black;
+    border:1px;
+    margin-top:10%;
+    text-align:end;
+    font-size:x-large;
+    font-style:italic;
+}
+</style>
+
+<p>This is a paragraph.This is a paragraph.This is a paragraph.</p>
+
+	
+5)	CSS Specificity (important)
+•	It means that if two selectors are having the same element, one with the higher specificity takes precedence based on the priority. If we use !important declaration that the precedence will override. There are four different categories which defines the specificity levels. They are in order or higher specificity to low specificity: inline styles, ID selectors, classes, tag name, attributes and pseudo classes. For example:
+
+# content h1{
+Padding: 5px;
+}
+
+# content h1{
+Padding: 10px;
+}
+
+The latter we take precedence based on the priority. 
+
+
+
+Reference
+
+•	http://webdesign.about.com/od/css/f/blfaqhidden.htm
+
+•	http://www.inmotionhosting.com/support/edu/website-design/using-css/linking-your-css-to-your-website
+
+•	http://www.w3schools.com/cssref/default.asp
+
+•	https://www.smashingmagazine.com/2007/07/css-specificity-things-you-should-know/
+
+•	https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity
