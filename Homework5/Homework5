@@ -1,0 +1,156 @@
+Sandeep Singh
+
+Homework 5
+
+1) Selectors
+•	Selectors are patterns that are used to select the elements which you want to style. There are many different types of selectors. . They are in order or higher specificity to low specificity: inline styles, ID selectors, classes, tag name, attributes and pseudo classes. 
+
+2) Specificty
+•	It means that if two selectors are having the same element, one with the higher specificity takes precedence based on the priority. If we use !important declaration that the precedence will override. There are four different categories which defines the specificity levels. They are in order or higher specificity to low specificity: inline styles, ID selectors, classes, tag name, attributes and pseudo classes. For example:
+
+	<style type="text/css">
+			
+	div>span {
+	color: red;
+	}
+	div>p>span{
+	color: brown;
+	}
+ 	</style>
+
+	<body>
+	This is div
+	<p>This is para in div
+
+	<span>This is span in para and div</span>
+	</p>
+
+	<span>This is span in div</span>
+			
+	</body>
+
+The div>p>span will take precedence based on the priority and specificity over the other div> span elements. 
+
+
+3) Inherited style and precedence
+•	It specifies that a property should inherit its value from its parent element. There are four different categories which defines the specificity levels. They are in order or higher specificity to low specificity: inline styles, ID selectors, classes, tag name, attributes and pseudo classes. For example:
+<style>
+div > p {
+    background-color: yellow;
+}
+</style>
+
+<body>
+<div>
+  <h2>This is heading 2</h2>
+  <p>I am a paragraph </p>
+</div>
+            </body>
+
+In this example, <div> would be parent and <p> would be the descendent and it will select all <p> element where the parent is <div> element. 
+
+4) Explain all selectors by example
+•	There are many different types of selectors. . They are in order or higher specificity to low specificity: ID selectors, classes, tag name, attributes and pseudo classes. The Id selector styles the element with specified id. For example, 
+
+	<style>
+	#firstname {
+   	 background-color: red;
+		}
+	</style>
+	</head>
+	<body>
+	<h1>Welcome to Heading 1</h1>
+
+	<div>
+ 	 <p id="firstname">My name is Sandeep</p>
+	</div>
+	</body>
+   In this example # firstname styles the my name is Sandeep with background color red       
+   with the specified id. 
+
+•	To select a specific class attribute use the class selector. In order to select a specific class, use period (.) character, followed by name of the class. For example, 
+
+<style>
+.name {
+  	  background-color: yellow;
+}
+</style>
+</head>
+<body>
+<h1>Welcome to My Homepage</h1>
+<div class="name">
+ 	<p>My name is Sandeep.</p>
+ 	 <p>I live in Michigan.</p>
+</div>
+</body>
+In this example, .name is the class and when I declare it in div element class=”name” it will make all the <p> inside div element yellow background color. 
+•	Tagname selectors are used for multiple elements. The tagname has to be same. For example: 
+
+<style>
+p {
+    background-color: green;
+}
+</style>
+</head>
+<body>
+
+<h1>Welcome to My Homepage</h1>
+
+<div>
+  <p id="firstname">My name is Sandeep</p>
+  <p id="hometown">I am from Michigan.</p>
+</div>
+</body>
+In this example, by declaring the p element in the style section, it will make the <p> inside the <div> element with a background color green. It will selects all <p> elements. 
+•	To select a specific attribute use the attribute selector. For example, 
+<style>
+a[target] {
+    background-color: blue;
+}
+</style>
+</head>
+<body>
+
+<p>The links with a target attribute gets a blue background:</p>
+<a href="http://www.wikipedia.org" target="_top">wikipedia.org</a>
+</body>
+</html>
+
+In this example, by declaring the attribute a [target] it will open up the Wikipedia link in the new window as well as with a background color blue. 
+
+•	In order to define a special state of an element such as using a style when user mouse over it, style visited or unvisited links, or style a particular element to get focus, then we need to use pseudo-class. For example, 
+	<style>
+	p::after {
+    	content: " – Put this Statement";
+	}
+	</style>
+	</head>
+	<body>
+
+	<p>My name is Sandeep</p>
+	<p>I am from Michigan</p>
+
+	</body>
+	This is example of  :after selector that is a part of the pseudo-class. In this example,    
+   “Put this Statement” will be inserted after each paragraph. 
+
+		
+
+References
+
+•	http://webdesign.about.com/od/css/f/blfaqhidden.htm
+
+•	http://www.inmotionhosting.com/support/edu/website-design/using-css/linking-your-css-to-your-website
+
+•	http://www.w3schools.com/cssref/default.asp
+
+•	https://www.smashingmagazine.com/2007/07/css-specificity-things-you-should-know/
+
+•	https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity
+
+•	http://www.w3schools.com/cssref/css_selectors.asp
+
+•	https://developer.mozilla.org/en-US/docs/Web/CSS/Reference#Selectors
+
+
+
