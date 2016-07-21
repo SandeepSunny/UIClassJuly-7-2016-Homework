@@ -1,0 +1,87 @@
+Sandeep Singh
+
+Homework 6
+
+1)	selector1, selector2 -- CSS grouping
+•	Separate each element name with coma, to style elements with the same style. For example:
+
+<style>
+h1, p {
+    background-color: yellow;
+}
+</style>
+</head>
+<body>
+
+<h1>Welcome to My Homepage</h1>
+
+<div>
+  <p>My name is Sandeep</p>
+  <p>I am from Michigan</p>
+</div>
+
+<p>I am learning CSS</p>
+	        </body>
+In this example, when we use element (h1), element (p) separated by coma, it will make the background color of heading 1 and paragraphs yellow.
+
+
+
+2) Try looking Pseuedo classes and pseudo elements
+
+•	In order to define a special state of an element such as using a style when user mouse over it, style visited or unvisited links, or style a particular element to get focus, then we need to use pseudo-class. For example, 
+
+<style>
+a:hover {
+    color: hotpink;
+}
+a: active {
+    color: blue;
+}
+</style>
+</head>
+<body>
+
+<p><b><a href="default.asp" target="_blank">This is a link</a></b></p>
+</body>
+In this example, when the mouse comes over the link the color will turn on hotpink and when the link is selected it becomes blue color. This is an example of pseudo-class for styling a special state for an element. 
+
+•	On the other hand, pseudo-elements, are used to style specified parts of an element. It could be styling the first letter, line, and insert content after, or before of an element. For example:
+	<style>
+	p::after {
+    	content: " – Put this Statement";
+	}
+	</style>
+	</head>
+	<body>
+
+	<p>My name is Sandeep</p>
+	<p>I am from Michigan</p>
+
+	</body>
+	This is example of: after selector that is a part of the pseudo-class. In this example,    
+   “Put this Statement” will be inserted after each paragraph. 
+
+
+
+References
+
+•	https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity
+
+•	http://www.w3schools.com/cssref/css_selectors.asp
+
+•	https://developer.mozilla.org/en-US/docs/Web/CSS/Reference#Selectors
+
+•	http://www.w3schools.com/css/css_pseudo_elements.asp
+
+•	http://www.w3schools.com/Css/css_pseudo_classes.asp
+
+
+
+
+
+
+
+
+
+	
+
