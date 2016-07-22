@@ -1,0 +1,339 @@
+Sandeep Singh
+
+Homework 7
+
+1)	Describe every pseudo class and pseudo elements and explain by an example.
+•	In order to define a special state of an element such as using a style when user mouse over it, style visited or unvisited links, or style a particular element to get focus, then we need to use pseudo-class. For example:
+
+<style>
+a:hover {
+    color: hotpink;
+}
+a:link {
+    color: red;
+}
+a:visited {
+    color: green;
+}
+a: active {
+    color: blue;
+}
+</style>
+</head>
+<body>
+
+<p><b><a href="default.asp" target="_blank">This is a link</a></b></p>
+</body>
+In this example, when the mouse comes over the link the color will turn on hotpink and when the link is selected it becomes blue color. When the link is visited the color turns to green. This is an example of pseudo-class for styling a special state for an element. 
+
+•	Input: Checked
+input: checked {
+    height: 50px;
+    width: 50px;
+}
+</style>
+</head>
+<body>
+
+<form action="">
+  <input type="radio" checked="checked" value="male" name="gender"> Male<br>
+  <input type="radio" value="female" name="gender"> Female<br>
+  <input type="checkbox" checked="checked" value="India"> I am from India<br>
+  <input type="checkbox" value="USA"> I am from USA. 
+</form>
+</body>
+In this example, the checked selectors sets the height and width of all checked<input elements for radio buttons and checkboxes. 
+
+•	Enabled and Disabled:
+<style>
+input[type=text]:enabled {
+    background: #ffff00;
+}
+input[type=text]:disabled {
+    background: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<form action="">
+First name: <input type="text" value="Sandeep"><br>
+Last name: <input type="text" value="Singh"><br>
+Country: <input type="text" disabled="disabled" value="Michigan">
+</form>
+</body>
+In this example, the enabled selector selects every enables <input> elements and disabled selector selects every disabled <input> element. 
+•	Empty:
+p:empty {
+    width: 100px;
+    height: 20px;
+    background: #ff0000;
+}
+</style>
+</head>
+<body>
+<p></p>
+<p>A paragraph.</p>
+<p>Another paragraph.</p>
+</body>
+In this example, empty selectors selects the elements that has no children. 
+•	First-Child:
+<style>
+p:first-child {
+    background-color: green;
+}
+</style>
+</head>
+<body>
+<p>This paragraph is the first child of its parent (body).</p>
+<h1>Welcome to My Homepage</h1>
+<p>This paragraph is not the first child of its parent.</p>
+<div>
+  <p>This paragraph is the first child of its parent (div).</p>
+  <p>This paragraph is not the first child of its parent.</p>
+</div>
+In this example, the first child of its parent will be selected by using first-child selectors. The first paragraph of body (parent) will be selected. The first paragraph of div (parent) will be selected. 
+•	first-of –type:
+<style>
+p:first-of-type {
+    background: red;
+}
+</style>
+</head>
+<body>
+<p>The first paragraph.</p>
+<p>The fourth paragraph.</p>
+</body>
+In this example, the first paragraph or first child of its parent will selected and color be red. 
+
+•	in-range:
+<style>
+input:in-range {
+    border: 2px solid yellow;
+}
+</style>
+</head>
+<body>
+<h3>A demonstration of the :in-range selector.</h3>
+<input type="number" min="2" max="8" value="7">
+</body>
+In this example, anything that is less than 2 or greater than 8 will not be selected because it is not specified within the range. 
+
+•	Invalid:
+
+<style>
+input:invalid {
+   	 border: 2px solid red;
+}
+</style>
+</head>
+<body>
+<h3>A demonstration of the :invalid selector.</h3>
+<input type="email" value="supportEmail">
+</body>
+In this example, invalid selector selects elements that does not validate according to element’s settings. Similarly valid selector will select the valid elements. 
+•	Last-child:
+<style>
+p:last-child {
+    background: #ff0000;
+}
+</style>
+</head>
+<body>
+<p>The first paragraph.</p>
+<p>The second paragraph.</p>
+</body>
+In the example, the second paragraph will be selected that is the last child of its parent. 
+
+•	Last-of-type: 
+
+
+
+<style>
+p:last-of-type {
+    background: #ff0000;
+}
+</style>
+</head>
+<body>
+<p>The third paragraph.</p>
+<p>The fourth paragraph.</p>
+</body>
+In this example, the fourth paragraph will be selected because it the last child of its parent. 
+•	nth-child()
+<style>
+p:nth-child(2) {
+    	background: red;
+}
+</style>
+</head>
+<body>
+<p>The first paragraph.</p>
+<p>The second paragraph.</p>
+<p>The third paragraph.</p>
+</body>
+In this example, the second paragraph will turn red because the (2) nth value is given, regardless of its parent. 
+•	nth-last-child and nth-last-of-type:
+<style>
+p:nth-last-child(2) {
+    background: red;
+}
+</style>
+</head>
+<body>
+<p>The first paragraph.</p>
+<p>The second paragraph.</p>
+<p>The third paragraph.</p>
+<p>The fourth paragraph.</p>
+</body>
+In this example, the third paragraph will be selected counting from the last-child. The nth last of type and nth of type will select the type based on the value counting from the last-child similar to nth last child. 
+•	Only-of-type and only-child:
+p:only-of-type {
+    background: red;
+}
+</style>
+</head>
+<body>
+<div><p>This is a paragraph.</p></div>
+<div><p>This is a paragraph.</p><p>This is a paragraph.</p></div>
+</body>
+In this example, only-of-type matches every element that is the only child of its type, of its parent. In this case, <div><p>This is a paragraph.</p></div> is only of type of its parent. The only-child situation works in a similar fashion as well, where the only-child matches every element that is only child of its parent. 
+•	Optional and Required: 
+
+
+<style>
+input:optional {
+    background-color: yellow;
+}
+</style>
+</head>
+<body>
+<h3>A demonstration of the: optional selector.</h3>
+<p>An optional input element:<br><input></p>
+<p>A required input element:<br><input required></p>
+<p>The :optional selector selects form elements with no "required" attribute.</p>
+</body>
+In this example, optional selects elements which are optional and for required selector are required to select. 
+•	Read-only and read-write:
+<style>
+input:read-only {
+    background-color: yellow;
+}
+</style>
+</head>
+<body>
+<h3>A demonstration of the: read-only selector.</h3>
+<p>A normal input element:<br><input value="hello"></p>
+<p>A readonly input element:<br><input readonly value="hello"></p>
+<p>The :read-only selector selects form elements with a "readonly" attribute.</p>
+</body>
+In the example, readonly selector will select the elements that are ‘readonly’. Read-write will only select the element that are ‘readable’ and ‘writeable’.
+•	Root:
+<style>
+:root {
+    background: #ff0000;
+}
+</style>
+</head>
+<body>
+<h1>This is a heading</h1>
+</body>
+In this example, the whole heading 1 will turn red, and root selector matches the document root element. 
+
+Pseudo Elements 
+•	On the other hand, pseudo-elements, are used to style specified parts of an element. It could be styling the first letter, line, and insert content after, or before of an element. For example:
+
+•	After:
+	<style>
+	p::after {
+    	content: " – Put this Statement";
+	}
+	</style>
+	</head>
+	<body>
+
+	<p>My name is Sandeep</p>
+	<p>I am from Michigan</p>
+
+	</body>
+	This is example of: after selector is a part of the pseudo-class. In this example,    
+   “Put this Statement” will be inserted after each paragraph. 
+
+•	Before:
+	<style>
+	p::before {
+    content: "Read this -";
+}
+</style>
+</head>
+<body>
+
+<p>My name is Sandeep</p>
+<p>I am from Michigan</p>
+
+</body>
+This is example of: before selector is a part of the pseudo-class. In this example,   
+ “Read this-” will be inserted before each paragraph. 
+
+•	First-letter:
+<style>
+p::first-letter {
+    font-size: 200%;
+    color:red;
+}
+</style>
+</head>
+<body>
+
+<h1>Welcome to My Homepage</h1>
+<p>My name is Sandeep.</p>
+<p>I am from Michigan.</p>
+</body>
+In this example, first-letter of each paragraph will selected with the specified CSS style. 
+
+•	First-line:
+<style>
+p::first-line {
+    background-color: yellow;
+}
+</style>
+</head>
+<body>
+
+<h1>This is Heading 1</h1>
+<p>This is a paragraph. This is another sentence.</p>
+
+<p></b>This is another paragraph .</p>
+</body>
+In this example, first-line of each paragraph will selected with the specified CSS style. 
+•	Selection:
+<style>
+::selection {
+    color: red;
+    background: yellow;
+}
+</style>
+</head>
+<body>
+<h1>Select some text on this page:</h1>
+<p>This is a paragraph.</p>
+<div>This is some text in a div element.</div>
+</body>
+In this example, selection selector matches the portion of an element that is selected by a user. 
+
+
+References
+•	http://www.w3schools.com/css/css_pseudo_elements.asp
+
+•	http://www.w3schools.com/Css/css_pseudo_classes.asp
+
+•	https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
+
+•	https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements
+
+
+
+
+
+
+
