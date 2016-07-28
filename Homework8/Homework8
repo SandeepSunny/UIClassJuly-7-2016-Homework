@@ -1,0 +1,309 @@
+Sandeep Singh
+
+Homework 8 
+
+1)	Bootstrap practice grid system, understand all the bootstrap class and how to write your own examples and combining them into one page, explain each class in bootstrap and provide example?
+•	Grid System: allows you to add columns across the page. You can add up to 12 columns on the page, however you can group them together to create a wider space. Columns will rearrange automatically based the screen size. There are four classes to the grid system and those are extra-small for phone, small for tablets, medium for desktops, and large for larger desktops. Together these classes create pages more flexible and dynamic. For example:
+
+<div class="row">
+   <div style="border:1px solid blue;" class="col-lg-1 col-md-2 col-sm-4 col-xs-6">col-lg-1 col-md-2 col-sm-4 col-xs-6</div>
+   <div style="border:1px solid blue;" class="col-lg-1 col-md-2 col-sm-4 col-xs-6">col-lg-1 col-md-2 col-sm-4 col-xs-6</div>
+   <div style="border:1px solid blue;" class="col-lg-1 col-md-2 col-sm-4 col-xs-6">col-lg-1 col-md-2 col-sm-4 col-xs-6</div>
+	         </div> 
+	          In this example, col-lg-1 is for large screen and it occupies 1 column out of 12. 
+Col-md-2 is for medium desktops and occupies 2 columns out of 12. Col-sm-4 is for small tablets and occupies 3 columns out of 12 and col-xs-6 is for extra-small phones and occupies 2 columns out of 12. 
+
+•	Bootstrap Typography: In bootstrap HTML elements are styled a little bit differently than browser defaults. There are many bootstrap typography classes and some of those classes are .lead which makes the paragraph stands out, .text-lowercase for lowercase text, .text-right for right aligned the text, etc. For example:
+<div class="container">
+  <div>
+   <h1>Typography</h1>
+   <p>This is para 1</p>
+ <p class="lead">This paragraph stands out.</p>  
+</div>
+In this example, h1 is styled using bootstrap styles and .lead class will make the paragraph stand out from the rest of the paragraphs. 
+
+•	Bootstrap Tables: In the bootstrap, tables are styled with light padding with only horizontal dividers and .table class is used to style the tables. You can style with different types of classes such as .table-striped, which adds zebra-striped to table, .table-bordered, adds borders on all sides of tables and cells, .hover-table, enables hover state on the table, .table-condensed, makes table more compact by cutting cell padding in half and so on. For example:
+	
+
+	<table class="table table-condensed table table-hover table-bordered table-striped">
+  	  <thead>
+      	<tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+In this example, the table will be striped, condensed, bordered, and hovered. 
+
+•	Bootstrap Images: In bootstrap, there are many different ways to shape the images. Images could be rounded, circle, or thumbnail. .img-rounded, adds round corners to an image. .img-circle, shapes the image to an circle, and .img-thumbnail, shapes images to an thumbnail. For example:
+	<h2>Thumbnail</h2>
+ 	 <p>The .img-thumbnail class creates a thumbnail of the image:</p>
+ 	 <img src="cinqueterre.jpg" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+	</div>
+	In this example, the image will be thumb nailed using .img-thumbnail class. 
+
+•	Bootstrap Jumbotron: indicates a big box for calling extra attention to some special content or information, and it is displayed with grey box with rounded corners. The font sizes and text inside it will also be enlarged. For example: 
+
+
+
+<div class="jumbotron">
+   <h1>This is is Div 1</h1>
+   <p>This is para 1</p>
+  </div>
+In this example, the heading div 1 and para 1 will be in a big box for calling extra attention to some special content or information, and it is displayed with grey box with rounded corners.
+
+•	Bootstrap Wells: The .well class will add rounded border around the element with a gray background color and some padding. There are many different sizes of wells such as small, normal and large. For example:
+<h2>Well Size</h2>
+  <div class="well well-sm">Small Well</div>
+  <div class="well">Normal Well</div>
+  <div class="well well-lg">Large Well</div>
+</div>
+In this example, when the code will be executed the first well will be small, second one will be normal and then large. 
+
+•	Bootstrap Alerts: creates an alert messages. For example:
+<div class="alert alert-success">
+    <strong>Success!</strong> This alert box could indicate a successful or positive action.
+  </div>
+  <div class="alert alert-info">
+    <strong>Info!</strong> This alert box could indicate a neutral informative change or action.
+  </div>
+  <div class="alert alert-warning">
+    <strong>Warning!</strong> This alert box could indicate a warning that might need attention.
+  </div>
+  <div class="alert alert-danger">
+    <strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.
+  </div>
+</div>
+There are many different kinds of alert classes. Some of those are .alert-info, .alert-success, .alert-warning and .alert-danger. All of these alert messages will be displayed in a different color. For example, success alert message would in green color and danger alert message would be in red color. 
+
+•	Bootstrap Buttons: provides many different types of buttons, these buttons could be in different sizes such as extra-small, small, medium and large. These buttons could also be active or disabled and you can have block level buttons as well which would span the entire width of parent element. An example of buttons include:
+<button type="button" class="btn btn-default">Default</button>
+  <button type="button" class="btn btn-primary">Primary</button>
+  <button type="button" class="btn btn-success">Success</button>
+  <button type="button" class="btn btn-info">Info</button>
+  <button type="button" class="btn btn-warning">Warning</button>
+  <button type="button" class="btn btn-danger">Danger</button>
+  <button type="button" class="btn btn-link">Link</button>
+</div>
+In this example, each of these buttons will be in different color. For instance, success would be in green color and danger would be in red in color. 
+
+•	Bootstrap Button Groups: you can add a series of buttons together on a single line in a button group. You can use .btn-group class to group the buttons together. You can also add vertical button groups, justified button group, nesting button groups and dropdown menus, and split button dropdowns. For example:
+<div class="btn-group">
+    <button type="button" class="btn btn-primary">C#</button>
+    <button type="button" class="btn btn-primary">Javascript</button>
+    <button type="button" class="btn btn-primary">CSS</button>
+<div class="btn-group-vertical">
+  <button type="button" class="btn btn-primary">Bootstrap</button>
+  <button type="button" class="btn btn-primary">HTML</button>
+  <button type="button" class="btn btn-primary">Jqeury</button>
+</div>
+  </div>
+In this example, the first part of buttons will be group together and second part is an example of vertical button groups. 
+
+•	Bootstrap Glyphicons: can be used in text, buttons, toolbars, navigation, forms, etc. Some of the example of glyphicon includes: envelope, print, search, download, etc. For example:
+<span class="glyphicon glyphicon-envelope"></span>
+  <span class="glyphicon glyphicon-print"></span>
+   <span class="glyphicon glyphicon-search"></span>
+  <span class="glyphicon glyphicon-download"></span>
+In this example, each of these glyphicon will present a different symbol pertaining to their particular form. For instance, print would add a print symbol, and download will add a download symbol. 
+
+•	Bootstrap Badges/Labels: Badges are referred to numerical indictors of how many items are associated with the link. They can be numbers such as 1, 2, 3, and can be used inside the buttons. Labels provide additional information about something. The following example is a combination of badges and labels:
+
+
+
+<div class="container">
+  <h1>Badges on Buttons</h1>
+  <button type="button" class="btn btn-danger">Danger <span class="badge">5</span></button>
+  <h2>Labels</h2>
+  <h2>Example <span class="label label-default">New</span></h2>
+</div>
+In this the example, badges are added with buttons and it will show (danger5) for badges and the second example is about labels (example new). 
+
+•	Bootstrap Progress Bars: shows a user how far along he/she is in a progress. There are several types of progress bars in bootstrap. Some of those progress bars are: default, label, colored, striped, animated and stacked. For example:
+
+<div class="container">
+  <h2>Animated Progress Bar</h2>
+  <p>The .active class animates the progress bar:</p>
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+      90%
+    </div>
+  </div>
+</div>
+The following is an example of animated progress bar with labels. 
+
+•	Bootstrap Pagination: Web pages who have multiple pages, it would be helpful to add some sort of pagination. You can have active or disabled pagination state. You can add different pagination sizes as well. You can also have breadcrumb pagination form which tells the active state of current page. For example:
+<div class="container">
+  <h2>Breadcrumbs</h2>
+  <p>The .breadcrumb class indicates the current page's location within a navigational hierarchy:</p>
+  <ul class="breadcrumb">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+    <li class="active">Link</li>
+  </ul>
+</div>
+This is an example of breadcrumb pagination with the active state which is the link section. 
+
+•	Bootstrap Pager: Pager are form of pagination that provides previous and next buttons links. For example:
+<p>The .pager class provides previous and next buttons (links):</p>
+  <ul class="pager">
+    <li><a href="#">Previous</a></li>
+    <li><a href="#">Next</a></li>
+  </ul>
+This is an example of pager buttons which you can click previous or next. 
+
+•	Bootstrap List Groups: are used to group the items in a list. You can add a unordered list, list groups with badges and list groups with linked items. You can also make the state active or disabled using list groups. For example: 
+<h2>List Group With Linked Items</h2>
+  <div class="list-group">
+    <a href="#" class="list-group-item">First item</a>
+    <a href="#" class="list-group-item">Second item</a>
+    <a href="#" class="list-group-item">Third item</a>
+  </div>
+The following is an example of list group with linked items in which you can click from one item to the next item. 
+
+•	Bootstrap Panels: is a bordered box with some padding around its content. You can have a panel group, panel heading, panel footer and panel with contextual classes. For example:
+<h2>Panel Heading</h2>
+  <div class="panel panel-default">
+    <div class="panel-heading">Panel Heading</div>
+    <div class="panel-body">Panel Content</div>
+  </div>
+The following is an example of panel heading with panel content. 
+
+•	Bootstrap Dropdowns: is a toggleable menu that allows the user to choose one value from a predefined list. You can add a dropdown divider, dropdown header or you can disable an item by using dropdown. For example:
+<div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li class="dropdown-header">Dropdown header 1</li>
+      <li><a href="#">HTML</a></li>
+      <li><a href="#">CSS</a></li>
+      <li><a href="#">JavaScript</a></li>
+      <li class="divider"></li>
+      <li class="dropdown-header">Dropdown header 2</li>
+      <li><a href="#">About Us</a></li>
+    </ul>
+  </div>
+The following is an example of header dropdown with headers inside the dropdown menu. 
+
+•	Bootstrap Collapse: are useful when you want to hide and show large amount of content. A user can add a collapsible panel, collapsible list groups, or accordion. For example:
+<div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse1">Collapsible panel</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse">
+        <div class="panel-body">Panel Body</div>
+        <div class="panel-footer">Panel Footer</div>
+      </div>
+The following is an example of collapsible panel and when a user clicks on collapsible panel he/she will be able to see the hidden content. 
+
+•	Bootstrap Tabs/Pills: are used to create menu in the web pages with tabs and pills. There are different ways to style these tabs and pills. For example:
+<h3>Tabs</h3>
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#">Home</a></li>
+    <li><a href="#">Menu 1</a></li>
+    <li><a href="#">Menu 2</a></li>
+    <li><a href="#">Menu 3</a></li>
+  </ul>
+  <br>
+  <h3>Pills</h3>
+  <ul class="nav nav-pills">
+    <li class="active"><a href="#">Home</a></li>
+    <li><a href="#">Menu 1</a></li>
+    <li><a href="#">Menu 2</a></li>
+    <li><a href="#">Menu 3</a></li>
+  </ul>
+</div>
+The following is an example of tabs and pills. 
+
+•	Bootstrap Navigation Bar: is a navigation header that is placed at the top of the page. You can extend or collapse the navigation bard depending on the screen sizes. You can have inverted navigation bar, fixed navigation bar, navigation bar with dropdown, align the navigation bar and collapse the navigation bar. For example:
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Page 1</a></li>
+      <li><a href="#">Page 2</a></li>
+      <li><a href="#">Page 3</a></li>
+    </ul>
+The following is an example of inverted navigation bar. 
+
+•	Bootstrap Forms: automatically receives some global styling with bootstrap. There are three types of form layouts: inline form, horizontal form and vertical form-which is default. Always use <form role=”form” class for better accessibility for the users. For example:
+<form class="form-inline" role="form">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+The following is an example of inline form where all the elements are inline, left-aligned and the labels are alongside. 
+
+•	Bootstrap Inputs: There are many different kinds of form controls that bootstrap supports. Some of these are input, textarea, checkbox, radio and select. For example:
+<form role="form">
+    <div class="checkbox">
+      <label><input type="checkbox" value="">Option 1</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" value="">Option 2</label>
+    </div>
+    <div class="checkbox disabled">
+      <label><input type="checkbox" value="" disabled>Option 3</label>
+    </div>
+	<label for="inputlg">input-lg</label>
+    <input class="form-control input-lg" id="inputlg" type="text">
+</form>
+</div>
+The following is an example of bootstrap checkboxes where the option 3 is disabled and rest of the options are enabled. It also shows the input sizing of column large after option 3. There are various control states that we can set in bootstrap inputs. Some of those are read-only, validation, icons or hidden labels. Input sizing can also be done by using classes like .input-lg and .input-sm and widths can be done by using columns classes like .col-lg and .col-sm. 
+
+•	Bootstrap Carousel: are plugins for cycling through elements like a slideshow. They can be added individually or in a file. Need to use id=”myCarousel” and class=”carousel” in order to make it work properly. For example, a slideshow on the web pages can be done by using carousel. 
+
+•	Bootstrap Modal: are plugin dialog box/popup window that is displayed on top of the current page. Modal size can be changed as well by adding .modal-sm for small modals and .modal-lg for large modals. For example, pop-window on the webpages can be done by modal. 
+
+•	Bootstrap Tooltip: are small pop-up box that displays some information or text when the mouse pointer is moved over the element. For example, to create a tooltip use the data-toggle= “tooltip” attribute. Tooltip must be initialized with JQuery. You can also position the tooltip by using different placements such as left, right, top and bottom.
+
+•	Bootstrap Popover: is similar to tooltips, except popover is a pop-box that appears when user clicks on an element and popover contains much more information about the content. For example, when creating popover need to use data-toggle= “popover” attribute. You can also position the popover by using different placements such as left, right, top and bottom.
+
+•	Bootstrap Scrollspy: is used to automatically update links in navigation list based on scroll position. Add data-spy= “scroll” to the element to make the scroll work.  For example, if you want to move from one section to another section on the same website just do scroll over and the link will be automatically shifted from one section to another. 
+
+•	Bootstrap Affix: If you want to make the element affixed or locked to an area on the page use affix. It is most commonly used in navigation menus or social icons buttons. In the case of affix, the user will be able to scroll on the web page, but the navigation menus will be fixed and it will not scroll or move. Use the data-spy= “affix” to the element you want to affixed. 
+
+
+References
+
+•	http://www.w3schools.com/bootstrap/default.asp
+•	http://www.tutorialspoint.com/bootstrap/
+•	http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/
+•	http://getbootstrap.com/
+
+
