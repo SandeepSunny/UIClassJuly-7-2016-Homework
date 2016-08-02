@@ -1,0 +1,78 @@
+Sandeep Singh
+Homework 10
+
+1)	centering in both horizontally and vertically a div in div using CSS
+•	One of the ways to center a div element horizontally using CSS:
+<div style= “text-align:center;”>
+<a> This is a some text centering a div element using CSS </a>
+
+•	In order to center div element vertically using CSS:
+<div class="box1">
+    <div class="box2">
+        I shall be in the middle of parentbox regardless of its size!
+    </div>
+</div>
+
+parentbox {
+    width:500px;
+    height:400px;
+    border-style:solid;
+    
+    text-align: center;  /* align the inline(-block) elements horizontally */
+}
+
+.parentbox:before {      /* create a full-height inline block pseudo-element */
+    content: ' ';
+    display: inline-block;
+    vertical-align: middle; /* vertical alignment of the inline element */
+    }
+
+.childbox {
+    display: inline-block;
+    vertical-align: middle;          /* vertical alignment of the inline element */
+    }
+
+2)	Look into CSS animations properties as well
+•	In CSS animation lets you change from one style to another. There are many different types of CSS properties and you can change it as many times you want. In CSS3 it is important to specify some keyframes for the animation. Keyframes hold what styles the element will have at certain times. For example:
+<style>
+div {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    animation-name: example;
+    animation-duration: 5s;
+}
+
+    from {background-color: blue;}
+    to {background-color: red;}
+}
+</style>
+In this example, the animation color will change from blue to red and will come back to original state which would be green in background color. 
+
+3)	all the css properties 
+•	CSS has many different properties groups. Some of those properties are: color, background and border, basic box layout, flexible box layout, text, text decoration, font, writing mode, table list and counter, animation, transform, basic user interface, multicolumn layout, etc. Here is an example of combining some of these properties elements:
+
+<style>
+p {
+       display:inline;
+    color: red;
+    background-color: black;
+    border:1px;
+    margin-top:10%;
+    text-align:end;
+    font-size:x-large;
+    font-style:italic;
+}
+</style>
+
+<p>This is a paragraph 1.This is a paragraph 2.This is a paragraph 3.</p>
+
+
+References
+
+•	http://www.w3schools.com/cssref/default.asp
+•	http://jsfiddle.net/hashem/vsakd/8/
+•	http://www.w3schools.com/css/css3_animations.asp
+
+
+
