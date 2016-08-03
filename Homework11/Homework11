@@ -1,0 +1,80 @@
+Sandeep Singh
+
+Homework 11
+
+1)	Understand java script data types?
+•	In java script there are many different types of data types that are different from other programming languages. Some of these data types are undefined, number, boolean, string, object, null and array. 
+1.	To declare a undefined data type:  var = x;
+2.	To declare a number data type: var x=10;
+3.	To declare a Boolean data type: var x= true; or var x= false;
+4.	To declare a string data type: var firstName= “Javascript”;
+5.	To declare an object data type: var x= {firstName: “Javascript”, lastName: “Language”};
+6.	To declare a null data type: var car=null;
+7.	To declare an array data type: var fruits = [“Mangoes”, “Apples”, “Peaches”];
+
+2)	Diff between null and undefined?
+•	Undefined means that that variable has been declared, but the value has not been assigned to it. For example: var=y;
+•	Null is a special type of object which returns object and it means empty or nothing. For example: var i=null;
+
+3)	== and === in java script
+•	= = means that if something is equal to something else. For example: 2= = “2”. This value will be returned true. 
+•	= = = means equal value and equal type. For example: 2= = = “2”. This value would be returned false. 
+
+4)	How to include java script into web pages?
+•	You can include java script into webpages by using internal or external methods. For internal method use <script> tag. For external method use external script files such as <script src="myScript.js"></script>. Usually the internal structure is better because it’s blocking in nature. 
+
+5)	Why do we need use java script?
+•	Java script has variety of usage. Some of those are it’s easy to implement by putting in code in the HTML document and tell the browser that it is a java script. It provides DOM manipulation and improve the user experience and provide dynamic functionality. Event handling also another usage of java script. It loads content into the document without reloading entire page which is known as Ajax. 
+					
+
+
+6)	Different types of including java script?
+•	Java script allows to build highly responsive user interfaces, prevents page reloads, and fix support issues for CSS. Different types includes: DOM manipulation, event handling, Ajax and oops. 
+
+7)	Best practices as well in java script?
+•	Java script has variety of usage. Some of those are it’s easy to implement by putting in code in the HTML document and tell the browser that it is a java script. It provides DOM manipulation and improve the user experience and provide dynamic functionality. Event handling also another usage of java script. It loads content into the document without reloading entire page which is known as Ajax.
+
+8)	DOM? 
+•	The way the HTML document content is accessed and modified is by using Document Object Model or DOM. The object are organized in hierarchy. The window objects are at the top of hierarchy and then comes document objects which is the content of the page. After document objects, there is a form objects followed by form control elements such as buttons, text fields, radio buttons and checkboxes. 
+
+9)	Understand what is DOM Manipulation? 
+•	DOM manipulation means whenever the web browser make changed to web page dynamically and keep tracks into tree like structure such as event handling operations can be done in DOM. 
+
+10)	Operational precedences
+•	Operator precedence determines the order in which operators are evaluated. Some of the operational precedences from highest to lowest includes: field access, array indexing, function calls, unary operators, multiplication, division, modulo division, addition and subtraction. 
+	
+11)	Truthy values
+•	Are values that translated to true when evaluated in context such as Boolean. All values are truthy unless they are defines falsy. Some of truthy values includes: true, not zero numbers, not empty strings, and empty objects {} and array [ ]. 
+
+12)	Falsy values?
+•	Are values that translated to be false when evaluated in context such as Boolean. Some of the falsy values includes: undefined, null, false, 0, empty strings and NaN. 
+
+13)	&& and || 
+•	&&: In && condition, if expression 1 is falsy value, we will get result as expression 1. For example: (x= 0 && y=45), we will get expression 1 which is zero because it is a falsy value. 
+•	If expression 1 is truthy value, we will get results as an expression 2. For example, (x=4 && y=65), we will get expression 2 because both are truthy values.
+•	||: In or || condition, if expression 1 is truthy value, we will get expression 1. For example: (x=4 && y=65), we will get expression 1 because both are truthy values but the operator is or ||. 
+•	If expression 1 is falsy value, we will get expression 2 as a result. For example: (x= 0 && y=45), we will get expression 2 which is zero because it is a falsy value and 45 is a true value. 
+
+
+References
+
+•	http://www.w3schools.com/js/default.asp
+
+•	https://www.codecademy.com/en/forum_questions/558ea4f5e39efed371000508
+
+
+•	https://docs.webplatform.org/wiki/concepts/programming/the_purpose_of_javascript
+
+•	http://www.tutorialspoint.com/javascript/javascript_html_dom.htm
+
+
+•	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+
+•	https://msdn.microsoft.com/en-us/library/z3ks45k7(v=vs.94).aspx
+
+
+•	https://developer.mozilla.org/en-US/docs/Glossary/Truthy
+
+•	https://developer.mozilla.org/en-US/docs/Glossary/Falsy
+
+
