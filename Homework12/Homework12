@@ -1,0 +1,56 @@
+Sandeep Singh
+
+Homework 12
+
+1)	Selectors in java script, practice by it an example? 
+
+•	document.getElemenById: it will select one element with matching Id name. For example: 
+<h1 id=This is Heading 1>Old Header</h1>
+<script>
+var element = document.getElementById(“This is Heading 1”);
+element.innerHTML = “This is New Heading”;
+</script>
+In this example, “This is Heading 1” will be change to “This is New Heading” by using the id element. 
+
+•	document.getElementByClassName: this method will select all elements with matching classname. For example:
+<div class="example">First div element with class="example"</div>
+<script>
+var x= document.getElementClassName(“example”);
+x.innerHTML = “I am a new Div”
+</script>
+In this example, “First div element with class” will be change to “I am a new Div” by using the classname element. 
+
+•	document.getElementByTagName: this method will select all elements with matching tagnames. For example:
+<span>This is span 1</span>
+<span>This is span 2</span>
+<script>
+document.getElementTagName(“span”)
+</script>
+In this example, all the span 1 and 2 elements will be selected by using the tag name. 
+
+•	document.querySelectorAll: this method will select most of the CSS selectors and most of the selectors will work. For example:
+
+<span>This is span 3</span>
+<span>This is span 4</span>
+<script>
+document.querySelectorAll (“span”)
+</script>
+In this example, all the span elements will be selected by using query selector all. 
+
+
+References
+
+•	http://www.w3schools.com/jsref/dom_obj_document.asp
+•	https://developer.mozilla.org/en-US/docs/Web/API/Document
+
+
+
+
+	
+
+
+
+
+
+
+	
