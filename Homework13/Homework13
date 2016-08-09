@@ -1,0 +1,132 @@
+Sandeep Singh
+
+Homework 13
+
+1)	Differences between while, do while and for loop
+
+•	For Loop: loops through the block of code number of times. In the for loop first the variable is declared and initialize, then the condition or test is set, and after that the increment or decrement part takes place. For example:
+for (var x=0; x<10; x++;)
+{ console.log(x); }
+In this example, the loop will run from 0 to 9 and the loop will continue to increment until the condition is met. 
+
+•	While Loop: loops through a block of code while a specified condition is me or true. For example:
+var b=0;
+       	while (b < 20) {
+       	console.log(b);
+            b++;
+        	}
+	In this example, if the condition is truthy value -- the block will be executed
+	if the condition is falsy value -- it will come out of the loop. The loop will continue to   
+increment until the condition is met. The loop will run from index 0 to 19. 
+
+•	Do While Loop: loops through a block of code while a specified condition is true or met. In the do while loop, the loop will run through the block of code whether or not the condition is true or not. For example: 
+var c = 0;
+       	do {
+      	 c++;
+       	console.log(c);}
+       	while (c<5)
+	In this example, the loop will run whether or not the condition is true or not. The loop will continue to increment until the condition is met. The loop will run from index 0 to 5. 
+	
+2)	Switch case statement.
+
+•	is used to perform different action based on different conditions. It will select one of many blocks to be executed. The value of expression is compared with each value case and if there is a match the block of code will be executed. The break keyword that is a part of switch statement will break out from the switch block. If there is no match case at all the default keyword will bring the loop out from the case. For example:
+	
+
+
+<script>
+  var grade = 'B'
+      	  switch (grade) 
+{
+            case 'A': console.log("Good job");
+                break;
+
+            case 'B': console.log("Pretty good");
+                break;
+
+            case 'C': console.log("Passed");
+                break;
+
+            default: console.log("Unknown grade")
+        	}
+console.log ("Exiting switch block");
+</script>
+In this example, the switch case B will be selected and matched based in the grade= ‘B’. And if there is unknown grade and did not match any of the cases A, B, or C, then the loop will exit from the switch case. 
+
+3)	methods on array in java script, push, pop, slice, splice, shift, unshift, indexOf, lastIndexOf, ...
+
+•	.push( ): add a new value at the end of the array and returns the new value. For example:
+	<script> 
+     	 var arr = ['1', '2', '3', '4', '5']
+	arr.push(6);
+	console.log(arr)
+	</script>
+In this example, push method will add new value of 6 to the existing array. 
+
+•	.pop( ): removes the last element from the array and returns that element. For example: 
+	<script> 
+     	 var arr1 = ['1', '2', '3', '4', '5']
+	arr1.pop(5);
+	console.log(arr1)
+	</script>
+In this example, 5 will be removed from the array and the new array will return [‘1’, ‘2’, ‘3’, ‘4’].
+
+•	.slice( ): this would create a new array, from the provided index values and it would not modify the values on existing array and the items in the new array are arr[startIndex] arr[startIndex+1], .... , arr[lastIndex -1]. For example: 
+For example: 
+	<script> 
+     	 var arr2 = ['1', '2', '3', '4', '5']
+	arr2.slice(1, 3);
+	console.log(arr2)
+	</script>
+In this example, 2 and 4 will removed from the array and in return the output will be [‘1’, ‘3’, ‘5’].
+
+•	.splice( ):  this will modify the existing array and split existing array into 2. From the startIndex it will removed the number of items provided there and the items removed are arr[startIndex], arr[startIndex+1], ...arr[startIndex + NumberOfItemsToBeRemoved -1]. For example:
+	<script>
+       	 var arr = ["JavaScript", "Ruby", "C#", "HTML "JQuery"];
+
+       	 var removed = arr.splice(2, 0, "CSS");
+       	 console.log(arr);
+
+       	 removed = arr.splice(3, 1);
+       	 console.log(removed)
+</script>
+In this example, CSS will be added after the Ruby and then C# will be removed and resulting array will be ["JavaScript", "Ruby", "HTML", "JQuery"];
+
+•	.shift( ): this method will remove the values at the starting of the array and returns the item. For example:
+<script>
+        var arr = ["JavaScript", "Ruby", "C#", "HTML"];
+  arr.shift();
+        console.log(arr);
+   </script>
+	In this example, “JavaScript” from the array will be removed and the output of the resulting array will be ["Ruby", "C#", "HTML"];
+
+•	.unshift( ):  this method will add the values at the starting of the array and returns the new length. For example:
+<script>
+        var arr = ["JavaScript", "Ruby", "C#", "HTML"];
+  arr.unshift(“CSS”);
+        console.log(arr);
+   </script>
+In this example, “CSS” will be added at the beginning of the array length and resulting array will be [ “CSS”, "JavaScript", "Ruby", "C#", "HTML"];
+
+•	.IndexOf( ): this method will get the index of the value within the array and it will return -1 when the match is not found in the array. For example:
+<script>
+        var arr = ["JavaScript", "Ruby", "C#", "HTML"];
+  arr.indexOf(“Ruby”);
+        console.log(arr);
+   </script>
+In this example, the indexOf “Ruby” will be 1. 
+
+•	.lastIndexOf( ): this method searches the array for the specified item, and returns it positon. It will start the search at specified position, or at end if no start position is specified and end the search at beginning of the array. Returns -1 if item not found and if item is present more than once, it will return the positon of last occurrence. For example:
+<script>
+        var arr = ["JavaScript", "Ruby", "C#", "HTML"];
+  arr.lastIndexOf(“Ruby”);
+        console.log(arr);
+   </script>
+In this example, the lastIndexOf “Ruby” will be 1. 
+
+	
+References
+•	http://www.w3schools.com/js/js_loop_for.asp
+•	http://www.w3schools.com/js/js_switch.asp
+•	http://www.tutorialspoint.com/javascript/javascript_switch_case.htm
+•	http://www.tutorialspoint.com/javascript/array_splice.htm
+
