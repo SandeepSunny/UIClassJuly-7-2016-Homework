@@ -1,0 +1,186 @@
+Sandeep Singh
+
+Homework 15
+
+1)	Please look into all the methods of the arrays, practice it by a example and provide the description 
+Here are some of the methods of the array by an example: 
+
+•	.push( ): add a new value at the end of the array and returns the new value. For example:
+•	<script> 
+     	 var arr = ['1', '2', '3', '4', '5']
+	arr.push(6);
+	console.log(arr)
+	</script>
+In this example, push method will add new value of 6 to the existing array. 
+
+•	.pop( ): removes the last element from the array and returns that element. For example: 
+	<script> 
+     	 var arr1 = ['1', '2', '3', '4', '5']
+	arr1.pop(5);
+	console.log(arr1)
+	</script>
+In this example, 5 will be removed from the array and the new array will return [‘1’, ‘2’, ‘3’, ‘4’].
+
+•	.slice( ): this would create a new array, from the provided index values and it would not modify the values on existing array and the items in the new array are arr[startIndex] arr[startIndex+1], .... , arr[lastIndex -1]. For example: 
+For example: 
+	<script> 
+     	 var arr2 = ['1', '2', '3', '4', '5']
+	arr2.slice(1, 3);
+	console.log(arr2)
+	</script>
+In this example, 2 and 4 will removed from the array and in return the output will be [‘1’, ‘3’, ‘5’].
+
+•	.splice( ):  this will modify the existing array and split existing array into 2. From the startIndex it will removed the number of items provided there and the items removed are arr[startIndex], arr[startIndex+1], ...arr[startIndex + NumberOfItemsToBeRemoved -1]. For example:
+	<script>
+       	 var arr = ["JavaScript", "Ruby", "C#", "HTML "JQuery"];
+
+       	 var removed = arr.splice(2, 0, "CSS");
+       	 console.log(arr);
+
+       	 removed = arr.splice(3, 1);
+       	 console.log(removed)
+</script>
+In this example, CSS will be added after the Ruby and then C# will be removed and resulting array will be ["JavaScript", "Ruby", "HTML", "JQuery"];
+
+•	.shift( ): this method will remove the values at the starting of the array and returns the item. For example:
+<script>
+        var arr = ["JavaScript", "Ruby", "C#", "HTML"];
+  arr.shift();
+        console.log(arr);
+   </script>
+	In this example, “JavaScript” from the array will be removed and the output of the resulting array will be ["Ruby", "C#", "HTML"];
+
+•	.unshift( ):  this method will add the values at the starting of the array and returns the new length. For example:
+<script>
+        var arr = ["JavaScript", "Ruby", "C#", "HTML"];
+  arr.unshift(“CSS”);
+        console.log(arr);
+   </script>
+In this example, “CSS” will be added at the beginning of the array length and resulting array will be [ “CSS”, "JavaScript", "Ruby", "C#", "HTML"];
+
+•	.IndexOf( ): this method will get the index of the value within the array and it will return -1 when the match is not found in the array. For example:
+<script>
+        var arr = ["JavaScript", "Ruby", "C#", "HTML"];
+  arr.indexOf(“Ruby”);
+        console.log(arr);
+   </script>
+In this example, the indexOf “Ruby” will be 1. 
+
+•	.lastIndexOf( ): this method searches the array for the specified item, and returns it positon. It will start the search at specified position, or at end if no start position is specified and end the search at beginning of the array. Returns -1 if item not found and if item is present more than once, it will return the positon of last occurrence. For example:
+<script>
+        var arr = ["JavaScript", "Ruby", "C#", "HTML"];
+  arr.lastIndexOf(“Ruby”);
+        console.log(arr);
+   </script>
+In this example, the lastIndexOf “Ruby” will be 1. 
+
+•	.forEach( ): this method will run the function for every value within an array. It has three parameter (value, index, arr). For example:
+<script>
+var arr = ['1', '2', '3', '4', '5']
+      	  arr.forEach(function(value, index, arr) {
+            console.log('The value is : '+value+ ' at the index : '+ index +' of the array : ', arr);
+        });
+        </script>
+	In this example, forEach method will return the value, index, and arr for the array. For instance, for the above array the value is: 1 at the index: 0 of the array: array[5]. 
+
+•	.map( ): this method will create a new array out of all the returned values and calls the provided function once for each element in an array, in order. For example: 
+<script>
+        var arr = ['1', '2', '3', '4', '5']
+        var arr2 = arr.map(function(value, index, arr){
+console.log('The value is : '+value+ ' at the index : '+ index +' of the array : ', arr);
+	return value+index;
+			}); 
+	console.log(arr2);
+  </script>
+In this example, the new array will be created out of the returned values. 
+
+•	.sort ( ): this method will sort the elements of an array in place and returns the array. For example:
+<script>
+        var lang = ["Ruby", "Javascript", "C#", "HTML"];
+        lang.sort();
+        console.log("Sorting: " + lang);
+    </script>
+In this example, the languages will be sorted and the output will be: C#, HTML, Javascript, Ruby. 
+
+	
+2)	What are properties within objects, add a property, remove a property, modify a property, accessing a property value in objects by example and explanation.
+•	Add a property: this method will add a new property and its values. For example:
+<script>
+        var person = {
+            firstname: "Java",
+            lastname: "Script",
+            age: 999,
+            eyecolor: "dynamic"
+        };
+        person.nationality = "Language";
+        console.log (person.firstname + " is " + person.nationality + ".");
+</script>
+	In this example, nationality is added as a new property and its value to the person object. 
+•	Remove a property: this method will delete the property from the object. For example: 
+<script>
+        var person = {
+            firstname: "Java",
+            lastname: "Script",
+            age: 999,
+            eyecolor: "dynamic"
+        };
+        delete person.age;
+        console.log(person.firstname + " is " + person.age + " years old.");
+</script>
+In this example, person age will be removed the person object and now the age will be undefined. 
+•	Modify a property: this method will modified the value. For example: 
+<script>
+        var person = {
+            firstname: "Java",
+            lastname: "Script",
+            age: 999,
+            eyecolor: "dynamic"
+        };
+        person.age = 1000;
+        console.log(person.firstname + " is " + person.age + " years old.");
+</script>
+In this example, person age will be modified and now the age of JavaScript will be 1000 years old. 
+•	Accessing the property: you can also access the JavaScript properties. For example: 
+<script>
+        var person = {
+            firstname: "Java",
+            lastname: "Script",
+            age: 999,
+            eyecolor: "dynamic"
+        };
+        console.log(person.firstname + " is " + person.age + " years old.");
+</script>
+In this example, person age is accesses through the person object.  
+
+3)	.hasOwnProperty ?? 
+•	hasOwnProperty: this method returns a Boolean indicating whether the object has the specified property. For example:
+<script>
+        var x = {
+            y: 11
+        };
+        console.log(x.hasOwnProperty("y")); //true
+        console.log(x.hasOwnProperty("z")); //false
+        </script>	
+In this example, “y” will come to be true because this property exists and “z” does not exist. 
+
+
+References
+•	http://www.tutorialspoint.com/javascript/array_splice.htm
+•	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/
+•	http://www.w3schools.com/jsref/jsref_forEach.asp
+•	http://www.w3schools.com/jsref/jsref_map.asp
+•	http://www.w3schools.com/js/js_objects.asp
+•	http://www.w3schools.com/js/js_object_prototypes.asp
+•	https://developer.mozilla.org/en US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
+•	https://msdn.microsoft.com/en-us/library/ff688127(v=vs.94).aspx
+
+
+
+
+
+
+
+
+
+
+
