@@ -1,0 +1,104 @@
+Sandeep Singh
+
+Homework 14
+
+1)	Implement an example for forEach and map, understand when to you which method of the arrays?
+•	.forEach( ): this method will run the function for every value within an array. It has three parameter (value, index, arr). For example:
+<script>
+var arr = ['1', '2', '3', '4', '5']
+      	  arr.forEach(function(value, index, arr) {
+            console.log('The value is : '+value+ ' at the index : '+ index +' of the array : ', arr);
+        });
+        </script>
+	In this example, forEach method will return the value, index, and arr for the array. For instance, for the above array the value is: 1 at the index: 0 of the array: array[5]. 
+
+•	.map( ): this method will create a new array out of all the returned values and calls the provided function once for each element in an array, in order. For example: 
+<script>
+        var arr = ['1', '2', '3', '4', '5']
+        var arr2 = arr.map(function(value, index, arr){
+console.log('The value is : '+value+ ' at the index : '+ index +' of the array : ', arr);
+	return value+index;
+			}); 
+	console.log(arr2);
+  </script>
+In this example, the new array will be created out of the returned values. 
+
+2)	Looks into the objects related methods hasOwnProperty, Obect.keys, add a property, remove a property, modify a property?
+•	hasOwnProperty: this method returns a Boolean indicating whether the object has the specified property. For example:
+<script>
+        var x = {
+            y: 11
+        };
+        console.log(x.hasOwnProperty("y")); //true
+        console.log(x.hasOwnProperty("z")); //false
+        </script>	
+In this example, “y” will come to be true because this property exists and “z” does not exist. 
+•	Object.keys: this method returns the names of the enumerable properties and methods of an object. For example: 
+
+
+<script>
+        var arr = ['a', 'b', 'c'];
+        console.log(Object.keys(arr));
+ </script>
+	In this example, the output of the array will be a=0; b=1; and c=2. It is returning the indexing of the values a, b, and c. 
+•	Add a property: this method will add a new property and its values. For example:
+<script>
+        var person = {
+            firstname: "Java",
+            lastname: "Script",
+            age: 999,
+            eyecolor: "dynamic"
+        };
+        person.nationality = "Language";
+        console.log (person.firstname + " is " + person.nationality + ".");
+</script>
+	In this example, nationality is added as a new property and its value to the person object. 
+•	Remove a property: this method will delete the property from the object. For example: 
+<script>
+        var person = {
+            firstname: "Java",
+            lastname: "Script",
+            age: 999,
+            eyecolor: "dynamic"
+        };
+        delete person.age;
+        console.log(person.firstname + " is " + person.age + " years old.");
+</script>
+In this example, person age will be removed the person object and now the age will be undefined. 
+•	Modify a property: this method will modified the value. For example: 
+<script>
+        var person = {
+            firstname: "Java",
+            lastname: "Script",
+            age: 999,
+            eyecolor: "dynamic"
+        };
+        person.age = 1000;
+        console.log(person.firstname + " is " + person.age + " years old.");
+</script>
+In this example, person age will be modified and now the age of JavaScript will be 1000 years old. 
+
+3)	Different ways of creating objects?
+•	There are many different ways of creating an object in the JavaScript. Some of these ways are using object literal, by using the new keyword (constructor) and by using object.create(). 
+
+4)	Why do we need to use objects in javascript?
+•	Objects are helpful to organize the data and that is the main importance of using objects in JavaScript. 
+
+5)	What is prototype in java script?
+•	The prototype is also an object and every object has a prototype. These objects inherit their properties and methods from their prototype. All object such as date, array, regular expression or function inherit from the object.prototype. 
+
+References
+
+•	http://www.w3schools.com/jsref/jsref_forEach.asp
+•	http://www.w3schools.com/jsref/jsref_map.asp
+•	http://www.w3schools.com/js/js_objects.asp
+•	http://www.w3schools.com/js/js_object_prototypes.asp
+•	https://developer.mozilla.org/en US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
+•	https://msdn.microsoft.com/en-us/library/ff688127(v=vs.94).aspx
+•	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
+
+
+
+
+
+
