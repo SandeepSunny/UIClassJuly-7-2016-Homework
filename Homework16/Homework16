@@ -1,0 +1,103 @@
+Sandeep Singh
+
+Homework 16
+
+1)	Define what is a prototype? Syntax? --> explain by an example
+•	The prototype is also an object and every object has a prototype. These objects inherit their properties and methods from their prototype. All object such as date, array, regular expression or function inherit from the object.prototype. For example:
+function Car(ma, ye) {
+            this.make = ma;
+            this.year = ye;
+        }
+        Car.prototype.company = 'general motors';
+        var c1 = new Car('Cadillac', 2000);
+        var c2 = new Car('Buick', 2001);
+        var c3 = new Car('Chevrolet', 2002);
+In this example, general motors will be prototype for all of the car objects. Cadillac, Buick, and Chevrolet will have general motors as their prototype. It serves as a global object. 
+
+2)	What is the difference when you add property to prototype vs when you add property using this? Which is better?
+•	this refers to current object and this.make for instance, is the current object your are creating a new property “make”. But if I want to have a property to all the object which created from Car function to same value then I would need to add to is prototype. 
+
+3)	Use of this keyword? 
+•	this refers to current object and this.make for instance, is the current object your are creating a new property “make”. 
+
+4)	Call, apply and bind methods in java script?
+•	There are three functions that can repalice ‘this’ keyword with any object. Those are call, apply and bind. 
+1.	Call: in this function we are replacing the value of ‘this’ keyword by passing the parameters of functions with comma separated values. For example:
+<script>
+var language1 = { Name:'English'};
+        var language2 = { Name: 'Hindi'};
+
+       function say(greeting) {
+            console.log(greeting + ' ' + this.Name);
+        }
+
+        say.call(language1, 'Hello');        
+</script>
+In this example, the output will be “Hello English”. 
+
+2.	Apply: in this function we are replacing the value of this keyword and passing the parameters of function as an array. For example:
+
+<script>
+var language1 = { Name:'English'};
+        var language2 = { Name: 'Hindi'};
+
+       function say(greeting) {
+            console.log(greeting + ' ' + this.Name);
+        }
+
+        say.apply(language2, ['Hello]');        
+</script>
+In this example, the output will be “Hello Hindi”. Both call and apply will execute and run the function. 
+
+3.	Bind: in this function, bind will not execute or run the function, it will create a new function by replacing the value of this with object in new created function. For example:
+<script>
+var language1 = { Name:'English'};
+var language2 = { Name: 'Hindi' };
+var language3 = { Name: 'Spanish'};
+
+function say() {
+
+console.log("Hello" + ' ' + this.Name);
+}
+
+var sayHelloSpanish = say.bind(language3);
+
+sayHelloSpanish();
+
+</script>
+In this example, the output will be “Hello Spanish”. In the bind function first pass the object, then return the bind function and then pass the argument. 
+
+5) Understand the reason why? 
+
+	var p1 = {
+		name : 'java script', 
+		age : 34,
+		height: 182,
+		weight : 170, 
+		getName : function() {
+			return this.name;
+		}
+	};
+	console.log(p1.getName()) --> value as 'java script'
+	var newFunc = p1.getName;
+	console.log(newFunc()); --> why the value 'java script' is not printed here? What can you do to print value 'java script' when called.
+•	In this example, variable newFunc has been declared and initialized, but calling the variable directly will not print any value because we are creating a new function out of getName. All the variables declared outside functions will be under window object. In this example, in order to print ‘java script’ name, need to write: console.log(p1.getName()); instead of writing newFunc in console.log. 
+
+
+References
+
+•	http://www.w3schools.com/js/js_object_prototypes.asp
+•	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
+•	https://codeplanet.io/javascript-apply-vs-call-vs-bind/
+
+
+
+
+
+
+
+
+
+
+
+	
