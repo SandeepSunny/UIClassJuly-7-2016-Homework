@@ -1,0 +1,69 @@
+Sandeep Singh
+
+Homework 17
+
+1) How can I use call, apply, bind methods for changing the value of 'this' keyword?
+explain the differences between call, apply and bind? When should I use 'call' over 'apply' over 'bind'? 
+
+•	There are three functions that can replace ‘this’ keyword with any object. Those are call, apply and bind. 
+1.	Call: in this function we are replacing the value of ‘this’ keyword by passing the parameters of functions with comma separated values. For example:
+<script>
+var language1 = { Name:'English'};
+        var language2 = { Name: 'Hindi'};
+
+       function say(greeting) {
+            console.log(greeting + ' ' + this.Name);
+        }
+
+        say.call(language1, 'Hello');        
+</script>
+In this example, the output will be “Hello English”. 
+
+2.	Apply: in this function we are replacing the value of this keyword and passing the parameters of function as an array. For example:
+
+<script>
+var language1 = { Name:'English'};
+        var language2 = { Name: 'Hindi'};
+
+       function say(greeting) {
+            console.log(greeting + ' ' + this.Name);
+        }
+
+        say.apply(language2, ['Hello]');        
+</script>
+In this example, the output will be “Hello Hindi”. Both call and apply will execute and run the function. 
+
+3.	Bind: in this function, bind will not execute or run the function, it will create a new function by replacing the value of this with object in new created function. For example:
+<script>
+var language1 = { Name:'English'};
+var language2 = { Name: 'Hindi' };
+var language3 = { Name: 'Spanish'};
+
+function say() {
+
+console.log("Hello" + ' ' + this.Name);
+}
+
+var sayHelloSpanish = say.bind(language3);
+
+sayHelloSpanish();
+
+</script>
+In this example, the output will be “Hello Spanish”. In the bind function first pass the object, then return the bind function and then pass the argument. 
+
+
+
+References
+
+•	https://codeplanet.io/javascript-apply-vs-call-vs-bind/
+•	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
+•	https://www.youtube.com/watch?v=c0mLRpw-9rI
+
+
+
+
+
+
+
+
+
