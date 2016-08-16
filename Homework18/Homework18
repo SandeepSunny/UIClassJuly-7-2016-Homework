@@ -1,0 +1,55 @@
+Sandeep Singh
+
+Homework 18
+
+1)	Look into java script hoisting, explain with an example? 
+•	In java script hoisting, the declaration will be moved to the top of the function or script. For example, var x=10; in this case var x is the declaration and x=10 is the initialization. It you do not declared a variable it will give an error. For example:
+
+<script>
+ var x = 5;
+     	 console.log("X will eqaul:"+ x);
+        	 </script>
+In this example, var x=5 have to declared at the top in order to get the output as 5. 
+
+
+
+Here is another example:
+
+<script>
+console.log(a); 
+        var a = 10; 
+        function func1() {
+            b=50;
+            console.log(a);
+            var a = 20; 
+        }
+        func1();
+        console.log(a);
+        console.log(b);
+</script>
+
+In this example, if the variable is not declared than it is a global variable which in this case is var a=10; because it is declared outside the function. On the other hand, var a=20 is a local variable because it had been declared and it is inside the function. In this example, console.log(a) at the top of the variable and function will be undefined and console.log(a) inside the function will also be undefined. But the console.log(a) and console.log(b) outside the function will display a=10 because it is a global variable and b=50 because it is a local variable and it is inside the function. 
+
+
+Here is another example:
+<script>
+console.log(func1);
+console.log(func2)
+        function func1() {
+            console.log('This function will be hoisted')
+        }
+        var func2 = function () { 
+            console.log('This variable will be hoisted');
+        };	
+    </script>
+
+In this example, there are two function 1 and 2. Function 1 will be hoisted because it a function and the output will be ‘This function will be hoisted’, but on the other hand, when you declare a variable function the “variable” will be hoisted and not the function and thus the output will be undefined. 
+
+
+References
+
+•	http://www.w3schools.com/js/js_hoisting.asp
+•	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var
+•	http://code.tutsplus.com/tutorials/javascript-hoisting-explained--net-15092
+•	http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html
+•	http://adripofjavascript.com/blog/drips/variable-and-function-hoisting
