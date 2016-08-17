@@ -1,0 +1,170 @@
+Sandeep Singh
+
+Homework 19
+
+1)	Solve more examples of java script hoisting in online and come back.
+•	In java script hoisting, the declaration will be moved to the top of the function or script. For example, var x=10; in this case var x is the declaration and x=10 is the initialization. It you do not declared a variable it will give an error. For example:
+
+<script>
+ var x = 5;
+     	 console.log("X will eqaul:"+ x);
+        	 </script>
+In this example, var x=5 have to declared at the top in order to get the output as 5. 
+
+Here is another example:
+
+<script>
+console.log(a); 
+        var a = 10; 
+        function func1() {
+            b=50;
+            console.log(a);
+            var a = 20; 
+        }
+        func1();
+        console.log(a);
+        console.log(b);
+</script>
+
+In this example, if the variable is not declared than it is a global variable which in this case is var a=10; because it is declared outside the function. On the other hand, var a=20 is a local variable because it had been declared and it is inside the function. In this example, console.log(a) at the top of the variable and function will be undefined and console.log(a) inside the function will also be undefined. But the console.log(a) and console.log(b) outside the function will display a=10 because it is a global variable and b=50 because it is a local variable and it is inside the function. 
+
+
+Here is another example:
+<script>
+console.log(func1);
+console.log(func2)
+        function func1() {
+            console.log('This function will be hoisted')
+        }
+        var func2 = function () { 
+            console.log('This variable will be hoisted');
+        };	
+    </script>
+
+In this example, there are two function 1 and 2. Function 1 will be hoisted because it a function and the output will be ‘This function will be hoisted’, but on the other hand, when you declare a variable function the “variable” will be hoisted and not the function and thus the output will be undefined. 
+
+
+2)	Html DOM events reference, practice with examples and come back.
+•	There are many different types of HTML DOM events. Some of those events are mouse events, keyboard events, frame/object events, form events, drag events, media events, animation events, etc. There are two ways to add event listeners by using attributes and using selectors. 
+	Mouse Events:
+
+	ondblclick Event: the event occurs when the user double-clicks on the element. For example:
+<body>
+    <p ondblclick="myFunction()">Double-click this paragraph Please!!.</p>
+
+<script>
+    function myFunction() {
+      alert( "Hello World");
+    }
+</script>
+In this example, when the paragraph is double clicked and the alert message will come to be “Hello World”. 
+
+	onmousedown Event: it occurs when the user presses the button over an element. For example:
+<body>
+    <p id="P1" onmousedown="mouseDown()" >
+     Click the text!
+</p>
+<script>
+    function mouseDown() {
+        document.getElementById("P1").style.color = "blue";
+    }
+
+</script>
+In this example, when the user clicks on the text the color will change to blue. 
+
+	Keyboard Events: 
+
+	onkeypress:  this event occurs when the presses the key on the keyboard. For example:
+<body>
+   <p> Press a key in the input field.</p>
+
+<input type="text" onkeypress="myFunction()">
+
+<script>
+    function myFunction() {
+        alert("You pressed a key inside the input field");
+    }
+</script>
+</body>
+In this example, when the user types anything in the user field, then the alert message will comes up that you have pressed the key in the input field. 
+
+	onkeydown: this event occurs when the user is pressing a key on the keyboard. For example:
+<body>
+   <p> Press a key in the input field.</p>
+
+<input type="text" onkeydown="myFunction()">
+
+<script>
+    function myFunction() {
+        alert("You pressed a key inside the input field");
+    }
+</script>
+</body>
+Both onkeypress and onkeypressdown works pretty similar, but the keypress represents the alpha-numeric character being typed and onkeydown refers character being typed. 
+
+	Frame/Object Events:
+
+	onerror Event: this event is triggered when error occurs while loading an external file. For example if could be an document or an image: 
+
+<body>
+  		<img src="image.gif" onerror="myFunction()">
+
+<script>
+   		 function myFunction() {
+     		   alert('The image could not be loaded.');
+    		}
+</script>
+In this example, when the image loads then the error alert message pops up saying image could not be loaded. 
+
+	onload Event: it occurs when an object has been loaded. This event is most often used with the <body> element to execute a script once a web page has been completely loaded all the content. For example:
+<body onload="myFunction()">
+
+<h1>Hello World!</h1>
+
+<script>
+    function myFunction() {
+        alert("Page is loaded");
+    }
+</script>
+In this example, when the page is loaded alert message pops up. 
+
+	Form Events: 
+
+	onreset Event: this event occurs when a form is reset. For example:
+<body>
+
+<form onreset="myFunction()">
+  Enter name: <input type="text">
+  <input type="reset">
+</form>
+
+<script>
+    function myFunction() {
+        alert("The form was reset");
+    }
+</script>
+
+</body>
+In this example, the form is reset when the user clicks on the reset button. 
+
+	onfocusin Event: is triggered when the element is about to get the focus.
+<body>
+
+Enter your name: <input type="text" onfocusin="myFunction(this)">
+
+<script>
+    function myFunction(x) {
+        x.style.background = "red";
+    }
+</script>
+In this example, when the user clicks on the input text box and start to type the color of the text box changes to red to get focus. 
+
+
+References
+
+•	http://www.w3schools.com/js/js_hoisting.asp
+•	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var
+•	http://code.tutsplus.com/tutorials/javascript-hoisting-explained--net-15092
+•	http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html
+•	http://adripofjavascript.com/blog/drips/variable-and-function-hoisting
+•	http://www.w3schools.com/jsref/dom_obj_event.asp
