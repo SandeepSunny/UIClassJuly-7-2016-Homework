@@ -1,0 +1,63 @@
+Sandeep Singh
+
+Homework 23
+
+1.	:nth-of-type() selector Vs. :nth-of-child() selector?
+•	:nth-of-type() selector: this selector will select all elements that are the nth of child, of a particular type, of their parent or it will select nth child of their parent in relation to siblings with the same element name. For example: 
+
+<script>
+$(document).ready(function(){
+    $("p:nth-of-type(2)").css("background-color", "red");
+});
+</script>
+</head>
+<body>
+
+<p>The first paragraph in body.</p>
+<p>The second paragraph in body.</p>
+
+</br>
+
+<div>
+  <span>This is a span element in div</span>
+  <p>The first paragraph in div.</p>
+  <p>The second paragraph in another div.</p>
+  <p>The last paragraph in div.</p>
+</div>
+<p>The third paragraph part of body.</p>	
+</body>
+In this example, each <p> element that is the second <p> element of its parent will be selected. The second paragraph will be selected in each of the examples above. The last third paragraph which is the part of the body is not selected because it is third child of body. 
+
+
+
+•	:nth-of-child() selector: this selector will select all elements that are the nth-child of their parent, regardless of type. For example: 
+
+<script>
+$(document).ready(function(){
+    $("p:nth-child(2)").css("background-color", "blue");
+});
+</script>
+</head>
+<body>
+
+<p>The first paragraph in body.</p>
+<p>The second paragraph in body.</p>
+
+ </br>
+
+<div style="border:1px red;">
+  <p>The first paragraph in another div.</p>
+  <p>The second paragraph in another div.</p>
+</div>
+
+</body>
+In this example, the second paragraph inside the body and div will be selected because paragraph has a child element relationship with both body and div in the above example. In other words, all <p> elements will be selected that are second child of their parent. 
+
+
+
+References
+•	https://api.jquery.com/nth-of-type-selector/
+•	http://www.w3schools.com/jquery/sel_nthoftype.asp
+•	https://api.jquery.com/nth-child-selector/
+•	http://www.w3schools.com/jquery/sel_nthchild.asp
+•	https://css-tricks.com/the-difference-between-nth-child-and-nth-of-type/
