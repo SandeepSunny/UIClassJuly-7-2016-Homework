@@ -1,0 +1,96 @@
+Sandeep Singh
+
+Homework 24
+
+1.	Event Delegation, how on works in JQuery?
+•	It will attach one or more event handlers for the selected elements and child elements. For example:
+<script>
+$(document).ready(function(){
+    $("p").on("click", function(){
+        alert("You Clicked Me!.");
+    });
+});
+</script>
+</head>
+<body>
+
+<p>Please Click Me!!.</p>
+</body>
+In this example, when you click on “Please Click Me!!” then the on click method works and the alert message shows “You Clicked Me!”
+
+
+2.	Bind Vs. on methods?
+•	Bind() method: it will attach one or more event handlers for selected elements, and specifies a function to run when the event occurs. For example:
+<script>
+$(document).ready(function(){
+    $("p").bind("click", function(){
+        alert("The user clicked on me.");
+    });
+});
+</script>
+</head>
+<body>
+
+<p>Click me!</p>
+</body>
+In this example, when you click on “click me” the bind method gets triggered and output alert message will be “The user clicked on me.”
+
+•	On() method: It will attach one or more event handlers for the selected elements and child elements. For example:
+<script>
+$(document).ready(function(){
+    $("p").on("click", function(){
+        alert("You Clicked Me!.");
+    });
+});
+</script>
+</head>
+<body>
+
+<p>Please Click Me!!.</p>
+</body>
+In this example, when you click on “Please Click Me!!” then the on click method works and the alert message shows “You Clicked Me!”
+
+
+3.	Window.onload() method and Jquery. Ready? 
+•	Window.onload() method: this method will run after everything has loaded and it attached an event handler to load event. This event mostly works with elements that are associated with URL such as image, iframe, frame or script and the window object. For example:
+<script>
+    $( document ).ready(function() {
+        alert( "document loaded" );
+    });
+
+    $( window ).load(function() {
+        alert( "window loaded" );
+    });
+    </script>
+</head>
+<body>
+    <iframe src="http://google.com"></iframe>
+</body>
+</body>
+In this example, first the document will be loaded and then the window will be loaded after the page has been completely loaded. 
+
+•	JQuery. Ready() method: the ready method will  run when the DOM is ready such as when all elements are there to be found/used are ready, but not necessarily the content. Since, this event occurs when document is ready, it is a good place to have all other jQuery event and functions. For example: 
+<script>
+$( document ).ready(function() {
+        alert( "document loaded" );
+    });
+ $( window ).load(function() {
+        alert( "window loaded" );
+    });
+ </script>
+</head>
+<body>
+    <iframe src="http://google.com"></iframe>
+</body>
+</body>
+In this example, first the document will be loaded and then the window onload method will get triggered. It will run when the DOM is ready. 
+
+
+References
+•	http://www.w3schools.com/jquery/event_on.asp
+•	http://api.jquery.com/on/
+•	http://www.w3schools.com/jquery/event_bind.asp
+•	http://api.jquery.com/bind/
+•	http://www.w3schools.com/jquery/event_load.asp
+•	http://stackoverflow.com/questions/21742867/jquery-ready-vs-window-onload
+•	http://stackoverflow.com/questions/4584373/difference-between-window-load-and-document-ready-functions
