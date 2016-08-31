@@ -1,0 +1,122 @@
+Sandeep Singh
+
+Homework 25
+
+1.	Look what is restful web services?
+•	REST stands for “Representational State Transfer”. It is not a protocol, instead it is a set of guidelines which talk about how a client should interact with a server. The combination of REST + Web services is called a RESTful web services. It directly rides on the HTTP protocol in order to send data from point 
+A to point B. Web services are online apis that developers can call from their code in order to read or access data or post data. They work very similar to website. In simple terms, the client will send the HTTP request to the server and then the server will send the HTTP response back in the form of XML, json, plain text or html. Each content in the REST is treated like a resource. Each resource is identified by a unique identifier (URIs)/ global IDs. Server is views as a set of resources and can be access by using URIs. 
+
+2.	How can you consume RESTful web services?
+•	From JavaScript, we try to consume REST web services to get data and show it on the user interface. Without refreshing the web page, we can get and show data using AJAX (Asynchronous Javascript and XML). 
+
+3.	What is get, put, post and delete http methods?
+•	Get: used to retrieve data from the server
+•	Post: create a new record or data 
+•	Put: update existing record 
+•	Delete: remove a data 
+
+4.	$.Ajax
+•	is a ajax() method provides ajax functionality in JQuery. It sends asynchronous requests to the server. The syntax is this:
+$.ajax(url,[options]	
+
+5.	Please practice get, put, post and delete method call.
+
+•	Get Method Example:
+<script>
+        	$(document).ready(function () {
+            $.ajax("http://www.omdbapi.com/?t='Sherlok'&tomatoes=true&plot=full",
+                {
+                    method: 'get',
+                    dataType: 'json',
+                    success: function (resp) {
+                        console.log(resp);
+                    },
+                    error: function (error) {
+                        console.log("Error occured");
+                    }
+                }
+
+
+            );
+        })
+    </script>
+In this example, the get method will retrieve the data from the server and in this case it will bring the details of the movie in the json format. 
+
+•	Put Method Example:
+<script>
+        $(document).ready(function () {
+            $.ajax("http://www.omdbapi.com/?t='Sherlok'&tomatoes=true&plot=full",
+                {
+                    method: 'put',
+                    dataType: 'json',
+                    data: {Released: '20 Dec 2016', Title: 'Ray'},
+                    success: function (data) {
+
+                        console.log(data);
+                    },
+                    error: function (error) {
+                        console.log("Error occured");
+                    }
+                }
+
+
+            );
+        })
+In this example, by using the put method we will update the existing record and now the Released will be change to ’20 Dec 2016 and the Title will be ‘Ray’.
+
+•	Post Method Example:
+<script>
+        $(document).ready(function () {
+            $.ajax("http://www.omdbapi.com/?t='Sherlok'&tomatoes=true&plot=full",
+                {
+                    method: 'post',
+                    dataType: 'json',
+                    data: {Released: '20 Jan 2016', Title: 'Blu'},
+                    success: function (data) {
+
+                        console.log(data);
+                    },
+                    error: function (error) {
+                        console.log("Error occured");
+                    }
+                }
+
+
+            );
+        })
+In this example, by using the post method we will create the new record and now the Released will be ’20 Jan 2016 and the Title will be ‘Blu’.
+
+•	Delete Method Example:
+<script>
+        $(document).ready(function () {
+            $.ajax("http://www.omdbapi.com/?t='Sherlok'&tomatoes=true&plot=full",
+                {
+                    method: 'delete',
+                    dataType: 'json',
+                    data: {Title: 'Blu'},
+                    success: function (data) {
+
+                        console.log(data);
+                    },
+                    error: function (error) {
+                        console.log("Error occured");
+                    }
+                }
+
+
+            );
+        })
+In this example, by using the delete method we will delete or remove the record and now the Title: ‘Blu’ will be removed. 
+
+
+
+
+
+References
+•	http://docs.oracle.com/javaee/6/tutorial/doc/gijqy.html
+•	http://www.drdobbs.com/web-development/restful-web-services-a-tutorial/240169069
+•	http://www.restapitutorial.com/lessons/httpmethods.html
+•	http://www.omdbapi.com/?t='Sherlok'&tomatoes=true&plot=full
+•	http://rest.learncode.academy/api/johnbob/friends/
+•	http://www.w3schools.com/ajax/
+•	http://www.codeproject.com/Articles/795483/Do-GET-POST-PUT-DELETE-in-asp-net-MVC-with-Jquery
