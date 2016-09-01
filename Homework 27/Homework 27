@@ -1,0 +1,49 @@
+Sandeep Singh	
+
+Homework 27
+
+1.	Implement a calculator using MVC in Angularjs?
+
+<head>
+    <title>My Angular App Calculator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script>
+    angular.module('CalculatorApp', [])
+    .controller('CalculatorController', function($scope) {
+        $scope.result = function() {
+            if ($scope.operator == 'Add') {
+                return $scope.number1 + $scope.number2;
+            }
+            if ($scope.operator == 'Subtract') {
+                return $scope.number1 - $scope.number2;
+            }
+            if ($scope.operator == 'Multiply') {
+                return $scope.number1 * $scope.number2;
+            }
+            if ($scope.operator == 'Divide') {
+                return $scope.number1 / $scope.number2;
+            }
+        };
+    });
+        </script>
+  </head>
+  
+<body>
+<h1>Calculating Numbers Using MVC</h1>
+   <div ng-app="CalculatorApp" ng-controller="CalculatorController">
+  <p><input type="number" ng-model="number1"></p>
+  <p><input type="number" ng-model="number2"></p>
+  <p><select ng-model="operator">
+        <option>Add</option>
+        <option>Subtract</option>
+        <option>Multiply</option>
+        <option>Divide</option>
+     </select></p>
+       <p>{{ result() }}</p>
+ </div>
+</body>
+
+
+References 
+• http://code-maven.com/calculator-in-angularjs
+• http://www.seguetech.com/a-simple-application-using-angularjs/
