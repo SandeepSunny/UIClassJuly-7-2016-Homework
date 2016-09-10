@@ -1,0 +1,80 @@
+Sandeep Singh
+
+Homework 28
+
+1)	Write a custom filter using angularjs? syntax, explain for all the possibility of parameters?
+•	In AngularJS filters are added to format data. There are couple of different types of filters that AngularJS provides in order to transform data. Some of those filters are currency, date, filter, json, limito, lowercase, number, orderBy and uppercase. 
+	Currency: is used to format a number to a currency format. For example: 
+<body>
+<div ng-app="myApp" ng-controller="costCtrl">
+
+<h1>Price: {{ price | currency }}</h1>
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('costCtrl', function($scope) {
+    $scope.price = 100;
+});
+</script>
+In this example, the output will come as Price: $100.00. The price is the expression followed by a pipe symbol and then come the filter currency.
+
+	Filter: will select subset of items from an array. For example:
+<body>
+
+<div ng-app="myApp" ng-controller="languagesCtrl">
+
+<ul>
+  <li ng-repeat="x in languages| filter : 's'">
+    {{ x }}
+  </li>
+</ul>
+
+</div>
+
+<script>
+angular.module('myApp', []).controller('languagesCtrl', function($scope) {
+    $scope.languages = [
+        'JavaScript',
+        'Go',
+        'HTML',
+        'CSS',
+        'AngularJS',
+        'C Sharp',
+        'Cobol',
+        'Java',
+        'Jquery'
+    ];
+});
+</script>
+In this example, languages that have “s” alphabet in them will be selected. The output will be JavaScript, CSS, Angular JS and C Sharp. 
+
+
+2) Why do we use directives?
+•	In AngularJS, the extension of HTML with new attributes is known as Directives. AngularJS has built-in directives which offers functionality to your applications and you can define your own directives as well. The built-in directives are ng-app which initializes an AngularJS application, ng-init which initializes application data and ng-model which binds the value of HTML controls (input, select, etc) to application data. 
+
+
+3) How to build custom directives (scope, restrict, link(scope, element, attrs), template and templateUrl)?
+•	In AngularJS, the extension of HTML with new attributes is known as Directives. Syntax for building custom directive is:
+angular.module(‘myApp’).directive (dir1’, function () {
+}
+return {
+restrict: ECAM
+}
+});
+
+•	Restrict property determines where a directive can be used as an element, attribute, CSS class, or comment.
+•	Scope property used to create a new child scope or an isolate scope. 
+•	Template property defines the content that should be output from the directive. Can include HTML, data binding expressions, and even other directives. 
+•	TemplateURL property provides path to the template that should be used by the directive. It can optionally contain a DOM element id when templates are defined in <script> tags. 
+•	Controller property used to define the controller that will be associated with the directive template. 
+•	Link property function used for DOM manipulation tasks. 
+
+
+References 
+•	http://www.w3schools.com/angular/angular_filters.asp
+•	https://docs.angularjs.org/guide/filter
+•	http://www.w3schools.com/angular/angular_directives.asp
+•	https://docs.angularjs.org/guide/directive
+•	http://www.ng-newsletter.com/posts/directives.html
+•	http://weblogs.asp.net/dwahlin/creating-custom-angularjs-directives-part-i-the-fundamentals
