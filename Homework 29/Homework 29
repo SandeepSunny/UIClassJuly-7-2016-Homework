@@ -1,0 +1,27 @@
+Sandeep Singh
+
+Homework 29
+
+1.	Factory, Service?
+•	Factory: when declaring factoryName as an injectable argument you will be provided with the value that is returned by invoking the function reference passed to module.facotry. The syntax is this:
+module.factory( 'factoryName', function ); 
+
+Service: when declaring serviceName as an injectable argument you will be provided with an instance of the function. This will always give an object back. In other words new FunctionYouPassedToService(). The syntax is this:
+module.service( 'serviceName', function ); 
+
+
+2.	Dependency Injection?
+•	It is a software design pattern that deals with how components get hold of their dependencies. AngularJS comes with a built-in dependency injection mechanism. We can divide an application into multiple different types of components which AngularJS can inject into each other. Modularizing the application makes it easier to reuse, configure and test the components of the application. It contains the following core types of objects and components: value, factory, service, provider and constant. These core types can be injected into each other using AngularJS dependency injection mechanism.  
+For example, we can inject dependencies while creating a module as given below: 
+angular.module('myapp', ['someDependency1','someDependency2']).config();
+
+
+3.	Singleton Design Pattern?
+•	It means only single object will be there in an application. It will have the data to be same access to the same application and it will share data between controllers. 
+
+References
+•	https://en.wikipedia.org/wiki/Dependency_injection
+•	https://docs.asp.net/en/latest/fundamentals/dependency-injection.html
+•	http://stackoverflow.com/questions/130794/what-is-dependency-injection
+•	http://stackoverflow.com/questions/15666048/angularjs-service-vs-provider-vs-factory
+•	https://en.wikipedia.org/wiki/Singleton_pattern
