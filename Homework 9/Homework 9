@@ -1,0 +1,142 @@
+Sandeep Singh
+
+Homework 9
+
+
+1)	Download a bootstrap template, Change then modify the web site and start using it.
+
+
+<!DOCTYPE html>
+<html lang="en">	
+<head>
+  <title>Webpage Using Bootstrap</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    .row.content {height: 450px}
+    
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;}
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+<a class="navbar-brand topnav" href="#">Start Bootstrap</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+           
+        </div>
+        
+    </nav>
+  
+<div class="container-fluid text-center">
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+    <p><a href="https://www.google.com/">Google</a></p>
+      <p><a href="http://www.w3schools.com/">W3 Schools</a></p>
+      <p><a href="http://getbootstrap.com/">Get Bootstrap</a></p>
+    </div>
+    <div class="col-sm-8 text-left">
+      <h1>Welcome</h1>
+      <p> This is my first Boostrap Webpage. Bootstrap is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first web sites</p>
+      <hr>
+      <h3>Benefits of Using Bootstrap</h3>
+      <p>The framework allows for rapid, responsive development that is consistent and well supported by the development and design community.</p>
+    </div>
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+        <p>I am a Well Number One</p>
+      </div>
+      <div class="well">
+        <p>I am a Well Number Two</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#about">About</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#services">Services</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted small">Copyright &copy; Bootstrap Company 2014. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+
+References
+
+•	https://bootstrapbay.com/blog/reasons-to-use-bootstrap/
+•	http://www.w3schools.com/bootstrap/
+•	https://startbootstrap.com/template-categories/all/
+•	http://getbootstrap.com/getting-started/
+•	https://startbootstrap.com/
